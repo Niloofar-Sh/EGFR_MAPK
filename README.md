@@ -1,3 +1,3 @@
-# MAPK_EGF
+# EGFR_MAPK
 
 TO BE ADDED ....
