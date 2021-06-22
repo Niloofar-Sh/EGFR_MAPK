@@ -16,4 +16,4 @@ The composed bond graph model of the Ras/MAPK signalling pathway from its consti
 The original annotated CellML models (or parameter sets) are stored in: EGFR_MAPK/CellML files
 The connectivity matrices for the modules are stored in: EGFR_MAPK/Connectivity Matrices
 
-To observe the comparisons between our results and the original models and analyze the behaviour of the final composed model, go to: EGFR_MAPK/Results_comparison
+To observe the comparisons between our results and the original models and analyze the behaviour of the final composed model, go to: EGFR_MAPK/Results_comparison/new_Comparison.ipynb
