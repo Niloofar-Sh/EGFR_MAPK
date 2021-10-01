@@ -8,10 +8,10 @@ The bond graph model of the MAPK cascade along with its dependencies is availabl
 
 To run the models you need to first install BondGraphTools, and then download and save the required ontologies as .csv files:
 
-CHEBI: https://bioportal.bioontology.org/ontologies/CHEBI
-FMA: https://bioportal.bioontology.org/ontologies/FMA
-OPB: https://bioportal.bioontology.org/ontologies/OPB
-GO: https://bioportal.bioontology.org/ontologies/GO
+- CHEBI: https://bioportal.bioontology.org/ontologies/CHEBI
+- FMA: https://bioportal.bioontology.org/ontologies/FMA
+- OPB: https://bioportal.bioontology.org/ontologies/OPB
+- GO: https://bioportal.bioontology.org/ontologies/GO
 
 ** Since the size of the stored ontologies exceeds the GitHub upload limit, the ontologies' .csv files are not uploaded here.
 
