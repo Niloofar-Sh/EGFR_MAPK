@@ -1,4 +1,4 @@
-# EGFR_MAPK
+# EGFR-Ras-MAPK Bond Graph Model
 
 The Ras/MAPK signalling pathway consists of two major networks: 1. EGFR pathway, 2. MAPK cascade.
 
