@@ -13,7 +13,7 @@ To run the models you need to first install BondGraphTools, and then download an
 - OPB: https://bioportal.bioontology.org/ontologies/OPB
 - GO: https://bioportal.bioontology.org/ontologies/GO
 
-** Since the size of the stored ontologies exceeds the GitHub upload limit, the ontologies' .csv files are not uploaded here.
+__Since the size of the stored ontologies exceeds the GitHub upload limit, the ontologies' .csv files are not uploaded here.__
 
 The composed bond graph model of the EGFR-Ras-MAPK signalling pathway from its constitutive modules (EGFR & MAPK) is: EGFR_MAPK/MAPK_EGF_New.ipynb
 
