@@ -4,7 +4,7 @@ The Ras/MAPK signalling pathway consists of two major networks: 1. EGFR pathway,
 
 The bond graph model of the EGFR pathway along with the parameter estimation is available at :point_right: [EGFR pathway](https://github.com/Niloofar-Sh/EGFR_MAPK/tree/main/EGF)
 
-The bond graph model of the MAPK cascade along with its dependencies is available in :point_right: EGFR_MAPK/MAPK cascade.
+The bond graph model of the MAPK cascade along with its dependencies is available in :point_right: [MAPK cascade](https://github.com/Niloofar-Sh/EGFR_MAPK/tree/main/MAPK cascade)
 
 To run the models you need to first install BondGraphTools, and then download and save the required ontologies as .csv files:
 
@@ -15,7 +15,7 @@ To run the models you need to first install BondGraphTools, and then download an
 
 __Since the size of the stored ontologies exceeds the GitHub upload limit, the ontologies' .csv files are not uploaded here.__
 
-The composed bond graph model of the EGFR-Ras-MAPK signalling pathway from its constitutive modules (EGFR & MAPK) is :point_right: EGFR_MAPK/MAPK_EGF_New.ipynb
+The composed bond graph model of the EGFR-Ras-MAPK signalling pathway from its constitutive modules (EGFR & MAPK) is :point_right: [EGFR-Ras-MAPK](https://github.com/Niloofar-Sh/EGFR_MAPK/tree/main/EGF)
 
 The original annotated CellML models (or parameter sets) are stored in :point_right: EGFR_MAPK/CellML files
 
