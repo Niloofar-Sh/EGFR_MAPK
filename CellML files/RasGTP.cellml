@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<model cmeta:id="metaid0" name="RasGTP" xmlns="http://www.cellml.org/cellml/1.1#" xmlns:cellml="http://www.cellml.org/cellml/1.1#" xmlns:cmeta="http://www.cellml.org/metadata/1.0#">
+    <units name="per_nanomolar">
+        <unit exponent="-1.0" units="nanomolar"/>
+    </units>
+    <units name="nanomolar_per_s">
+        <unit exponent="-1.0" units="second"/>
+        <unit units="nanomolar"/>
+    </units>
+    <units name="nanomolar">
+        <unit prefix="nano" units="mole"/>
+        <unit exponent="-1.0" units="litre"/>
+    </units>
+    <units name="J_per_mol_K">
+        <unit exponent="-1.0" units="kelvin"/>
+        <unit exponent="-1.0" units="mole"/>
+        <unit units="joule"/>
+    </units>
+    <units name="first_order_rate_constant">
+        <unit exponent="-1.0" units="minute"/>
+    </units>
+    <units name="minute">
+        <unit multiplier="60.0" units="second"/>
+    </units>
+    <component name="RasGTP_model">
+        <variable cmeta:id="RasGTP_model.idealGasConstant" initial_value="8.314" name="idealGasConstant" units="J_per_mol_K"/>
+        <variable cmeta:id="RasGTP_model.T" initial_value="310" name="T" units="kelvin"/>
+        <variable cmeta:id="RasGTP_model.ShcGS" initial_value="0" name="ShcGS" units="nanomolar"/>
+        <variable cmeta:id="RasGTP_model.RasGDP" initial_value="3.2e-11" name="RasGDP" units="nanomolar"/>
+        <variable cmeta:id="RasGTP_model.Ras_ShcGS" initial_value="0" name="Ras_ShcGS" units="nanomolar"/>
+        <variable cmeta:id="RasGTP_model.RasGTP" initial_value="3.3e-13" name="RasGTP" units="nanomolar"/>
+        <variable cmeta:id="RasGTP_model.GAP" initial_value="2.5e-11" name="GAP" units="nanomolar"/>
+        <variable cmeta:id="RasGTP_model.Ras_GAP" initial_value="0" name="Ras_GAP" units="nanomolar"/>
+        <variable cmeta:id="RasGTP_model.Ras_Raf" initial_value="0" name="Ras_Raf" units="nanomolar"/>
+        <variable cmeta:id="RasGTP_model.K_ShcGS" initial_value="0.13" name="K_ShcGS" units="per_nanomolar"/>
+        <variable cmeta:id="RasGTP_model.K_RasGDP" initial_value="0.13" name="K_RasGDP" units="per_nanomolar"/>
+        <variable cmeta:id="RasGTP_model.K_Ras_ShcGS" initial_value="10.47" name="K_Ras_ShcGS" units="per_nanomolar"/>
+        <variable cmeta:id="RasGTP_model.K_RasGTP" initial_value="0.0064" name="K_RasGTP" units="per_nanomolar"/>
+        <variable cmeta:id="RasGTP_model.K_GAP" initial_value="0.553" name="K_GAP" units="per_nanomolar"/>
+        <variable cmeta:id="RasGTP_model.K_Ras_GAP" initial_value="42.72" name="K_Ras_GAP" units="per_nanomolar"/>
+        <variable cmeta:id="RasGTP_model.K_Ras_Raf" initial_value="16.07" name="K_Ras_Raf" units="per_nanomolar"/>
+        <variable cmeta:id="RasGTP_model.r12" initial_value="0.95" name="r12" units="nanomolar_per_s"/>
+        <variable cmeta:id="RasGTP_model.r13" initial_value="1.43" name="r13" units="nanomolar_per_s"/>
+        <variable cmeta:id="RasGTP_model.r14" initial_value="1.4" name="r14" units="nanomolar_per_s"/>
+        <variable cmeta:id="RasGTP_model.r15" initial_value="16.85" name="r15" units="nanomolar_per_s"/>
+        <variable cmeta:id="RasGTP_model.r16" initial_value="0.186" name="r16" units="nanomolar_per_s"/>
+    </component>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" description="RasGDP" rdf:about="#RasGTP_model.K_RasGDP">
+            <semsim:isComputationalComponentFor xmlns:semsim="http://www.bhi.washington.edu/SemSim#">
+                <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#property_8">
+                    <semsim:hasPhysicalDefinition xmlns:semsim="http://www.bhi.washington.edu/SemSim#" rdf:resource="https://identifiers.org/opb/OPB_01283" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+                </rdf:Description>
+            </semsim:isComputationalComponentFor>
+        </rdf:Description>
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" description="r15" rdf:about="#RasGTP_model.r15"/>
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" description="r13" rdf:about="#RasGTP_model.r13"/>
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" modelName="RasGTP" rdf:about="#metaid0"/>
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" description="Ras_GAP" rdf:about="#RasGTP_model.K_Ras_GAP">
+            <semsim:isComputationalComponentFor xmlns:semsim="http://www.bhi.washington.edu/SemSim#">
+                <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#property_12">
+                    <semsim:hasPhysicalDefinition xmlns:semsim="http://www.bhi.washington.edu/SemSim#" rdf:resource="https://identifiers.org/opb/OPB_01283" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+                </rdf:Description>
+            </semsim:isComputationalComponentFor>
+        </rdf:Description>
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" description="Ras_ShcGS" rdf:about="#RasGTP_model.Ras_ShcGS">
+            <semsim:isComputationalComponentFor xmlns:semsim="http://www.bhi.washington.edu/SemSim#">
+                <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#property_2">
+                    <semsim:hasPhysicalDefinition xmlns:semsim="http://www.bhi.washington.edu/SemSim#" rdf:resource="https://identifiers.org/opb/OPB_00340" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+                </rdf:Description>
+            </semsim:isComputationalComponentFor>
+        </rdf:Description>
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#RasGTP_model.Ras_Raf">
+            <semsim:isComputationalComponentFor xmlns:semsim="http://www.bhi.washington.edu/SemSim#">
+                <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#property_6">
+                    <semsim:physicalPropertyOf xmlns:semsim="http://www.bhi.washington.edu/SemSim#">
+                        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#entity_1">
+                            <semsim:hasPhysicalDefinition xmlns:semsim="http://www.bhi.washington.edu/SemSim#" rdf:resource="http://identifiers.org/go/GO:0007265" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+                        </rdf:Description>
+                    </semsim:physicalPropertyOf>
+                    <semsim:hasPhysicalDefinition xmlns:semsim="http://www.bhi.washington.edu/SemSim#" rdf:resource="https://identifiers.org/opb/OPB_00340" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+                </rdf:Description>
+            </semsim:isComputationalComponentFor>
+        </rdf:Description>
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#RasGTP_model.idealGasConstant">
+            <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" rdf:resource="https://identifiers.org/opb/OPB_00410" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+        </rdf:Description>
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" description="RasGTP" rdf:about="#RasGTP_model.RasGTP">
+            <semsim:isComputationalComponentFor xmlns:semsim="http://www.bhi.washington.edu/SemSim#">
+                <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#property_3">
+                    <semsim:hasPhysicalDefinition xmlns:semsim="http://www.bhi.washington.edu/SemSim#" rdf:resource="https://identifiers.org/opb/OPB_00340" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+                </rdf:Description>
+            </semsim:isComputationalComponentFor>
+        </rdf:Description>
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#RasGTP_model.idealGasConstant">
+            <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" rdf:resource="https://identifiers.org/opb/OPB_00410" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+        </rdf:Description>
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#RasGTP_model.ShcGS">
+            <semsim:isComputationalComponentFor xmlns:semsim="http://www.bhi.washington.edu/SemSim#">
+                <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#property_0">
+                    <semsim:physicalPropertyOf xmlns:semsim="http://www.bhi.washington.edu/SemSim#">
+                        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#entity_0">
+                            <semsim:hasPhysicalDefinition xmlns:semsim="http://www.bhi.washington.edu/SemSim#" rdf:resource="http://identifiers.org/go/GO:0070621" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+                        </rdf:Description>
+                    </semsim:physicalPropertyOf>
+                    <semsim:hasPhysicalDefinition xmlns:semsim="http://www.bhi.washington.edu/SemSim#" rdf:resource="https://identifiers.org/opb/OPB_00340" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+                </rdf:Description>
+            </semsim:isComputationalComponentFor>
+        </rdf:Description>
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" description="GAP" rdf:about="#RasGTP_model.GAP">
+            <semsim:isComputationalComponentFor xmlns:semsim="http://www.bhi.washington.edu/SemSim#">
+                <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#property_4">
+                    <semsim:hasPhysicalDefinition xmlns:semsim="http://www.bhi.washington.edu/SemSim#" rdf:resource="https://identifiers.org/opb/OPB_00340" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+                </rdf:Description>
+            </semsim:isComputationalComponentFor>
+        </rdf:Description>
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#RasGTP_model.T">
+            <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" rdf:resource="https://identifiers.org/opb/OPB_00293" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+        </rdf:Description>
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#RasGTP_model.T">
+            <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" rdf:resource="https://identifiers.org/opb/OPB_00293" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+        </rdf:Description>
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" description="RasGDP" rdf:about="#RasGTP_model.RasGDP">
+            <semsim:isComputationalComponentFor xmlns:semsim="http://www.bhi.washington.edu/SemSim#">
+                <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#property_1">
+                    <semsim:hasPhysicalDefinition xmlns:semsim="http://www.bhi.washington.edu/SemSim#" rdf:resource="https://identifiers.org/opb/OPB_00340" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+                </rdf:Description>
+            </semsim:isComputationalComponentFor>
+        </rdf:Description>
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" description="r16" rdf:about="#RasGTP_model.r16"/>
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#RasGTP_model.K_ShcGS">
+            <semsim:isComputationalComponentFor xmlns:semsim="http://www.bhi.washington.edu/SemSim#">
+                <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#property_7">
+                    <semsim:physicalPropertyOf xmlns:semsim="http://www.bhi.washington.edu/SemSim#" rdf:resource="#entity_0" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+                    <semsim:hasPhysicalDefinition xmlns:semsim="http://www.bhi.washington.edu/SemSim#" rdf:resource="https://identifiers.org/opb/OPB_01283" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+                </rdf:Description>
+            </semsim:isComputationalComponentFor>
+        </rdf:Description>
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" description="Ras_GAP" rdf:about="#RasGTP_model.Ras_GAP">
+            <semsim:isComputationalComponentFor xmlns:semsim="http://www.bhi.washington.edu/SemSim#">
+                <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#property_5">
+                    <semsim:hasPhysicalDefinition xmlns:semsim="http://www.bhi.washington.edu/SemSim#" rdf:resource="https://identifiers.org/opb/OPB_00340" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+                </rdf:Description>
+            </semsim:isComputationalComponentFor>
+        </rdf:Description>
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" description="r14" rdf:about="#RasGTP_model.r14"/>
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" description="r12" rdf:about="#RasGTP_model.r12"/>
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" description="RasGTP" rdf:about="#RasGTP_model.K_RasGTP">
+            <semsim:isComputationalComponentFor xmlns:semsim="http://www.bhi.washington.edu/SemSim#">
+                <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#property_10">
+                    <semsim:hasPhysicalDefinition xmlns:semsim="http://www.bhi.washington.edu/SemSim#" rdf:resource="https://identifiers.org/opb/OPB_01283" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+                </rdf:Description>
+            </semsim:isComputationalComponentFor>
+        </rdf:Description>
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" description="Ras_ShcGS" rdf:about="#RasGTP_model.K_Ras_ShcGS">
+            <semsim:isComputationalComponentFor xmlns:semsim="http://www.bhi.washington.edu/SemSim#">
+                <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#property_9">
+                    <semsim:hasPhysicalDefinition xmlns:semsim="http://www.bhi.washington.edu/SemSim#" rdf:resource="https://identifiers.org/opb/OPB_01283" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+                </rdf:Description>
+            </semsim:isComputationalComponentFor>
+        </rdf:Description>
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" description="GAP" rdf:about="#RasGTP_model.K_GAP">
+            <semsim:isComputationalComponentFor xmlns:semsim="http://www.bhi.washington.edu/SemSim#">
+                <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#property_11">
+                    <semsim:hasPhysicalDefinition xmlns:semsim="http://www.bhi.washington.edu/SemSim#" rdf:resource="https://identifiers.org/opb/OPB_01283" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+                </rdf:Description>
+            </semsim:isComputationalComponentFor>
+        </rdf:Description>
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#RasGTP_model.K_Ras_Raf">
+            <semsim:isComputationalComponentFor xmlns:semsim="http://www.bhi.washington.edu/SemSim#">
+                <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#property_13">
+                    <semsim:physicalPropertyOf xmlns:semsim="http://www.bhi.washington.edu/SemSim#" rdf:resource="#entity_1" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+                    <semsim:hasPhysicalDefinition xmlns:semsim="http://www.bhi.washington.edu/SemSim#" rdf:resource="https://identifiers.org/opb/OPB_01283" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+                </rdf:Description>
+            </semsim:isComputationalComponentFor>
+        </rdf:Description>
+    </rdf:RDF>
+</model>
