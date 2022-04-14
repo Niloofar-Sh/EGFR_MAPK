@@ -15,7 +15,7 @@ To run the models you need to first install BondGraphTools, and then download an
 
 __Since the size of the stored ontologies exceeds the GitHub upload limit, the ontologies' .csv files are not uploaded here.__
 
-The composed bond graph model of the EGFR-Ras-MAPK signalling pathway from its constitutive modules (EGFR & Ras & MAPK) is :point_right: [EGFR-Ras-MAPK](https://github.com/Niloofar-Sh/EGFR_MAPK/blob/main/MAPK_EGF_New.ipynb)
+The composed bond graph model of the EGFR-Ras-MAPK signalling pathway from its constitutive modules (EGFR & Ras & MAPK) is :point_right: [EGFR-Ras-MAPK](https://github.com/Niloofar-Sh/EGFR_MAPK/blob/main/EGF_Ras_MAPK.ipynb)
 
 The modified annotated CellML models (or parameter sets) are stored in :point_right: [CellML files](https://github.com/Niloofar-Sh/EGFR_MAPK/tree/main/CellML%20files) 
 
