@@ -1,0 +1,555 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+This CellML file was generated on 10/07/2009 at 10:18:19 at a.m. using:
+
+COR (0.9.31.1207)
+Copyright 2002-2009 Dr Alan Garny
+http://COR.physiol.ox.ac.uk/ - COR@physiol.ox.ac.uk
+
+CellML 1.0 was used to generate this model
+http://www.CellML.org/
+-->
+<model cmeta:id="brightman_fell_2000" name="brightman_fell_2000" xmlns="http://www.cellml.org/cellml/1.0#" xmlns:cellml="http://www.cellml.org/cellml/1.0#" xmlns:cmeta="http://www.cellml.org/metadata/1.0#">
+    <units name="minute">
+        <unit multiplier="60" units="second"/>
+    </units>
+    <units name="first_order_rate_constant">
+        <unit exponent="-1" units="minute"/>
+    </units>
+    <component name="environment">
+        <variable name="time" public_interface="out" units="minute"/>
+    </component>
+    <component name="ShcGS">
+        <variable initial_value="0" name="ShcGS" public_interface="out" units="dimensionless"/>
+        <variable name="v13" public_interface="in" units="first_order_rate_constant"/>
+        <variable name="v12" public_interface="in" units="first_order_rate_constant"/>
+        <variable name="time" public_interface="in" units="minute"/>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <apply>
+                    <diff/>
+                    <bvar>
+                        <ci>time</ci>
+                    </bvar>
+                    <ci>ShcGS</ci>
+                </apply>
+                <apply>
+                    <minus/>
+                    <ci>v13</ci>
+                    <ci>v12</ci>
+                </apply>
+            </apply>
+        </math>
+    </component>
+    <component name="RasGDP">
+        <variable initial_value="19800" name="RasGDP" public_interface="out" units="dimensionless"/>
+        <variable name="v15" public_interface="in" units="first_order_rate_constant"/>
+        <variable name="v12" public_interface="in" units="first_order_rate_constant"/>
+        <variable name="time" public_interface="in" units="minute"/>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <apply>
+                    <diff/>
+                    <bvar>
+                        <ci>time</ci>
+                    </bvar>
+                    <ci>RasGDP</ci>
+                </apply>
+                <apply>
+                    <minus/>
+                    <ci>v15</ci>
+                    <ci>v12</ci>
+                </apply>
+            </apply>
+        </math>
+    </component>
+    <component name="Ras_ShcGS">
+        <variable initial_value="0" name="Ras_ShcGS" public_interface="out" units="dimensionless"/>
+        <variable name="v12" public_interface="in" units="first_order_rate_constant"/>
+        <variable name="v13" public_interface="in" units="first_order_rate_constant"/>
+        <variable name="time" public_interface="in" units="minute"/>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <apply>
+                    <diff/>
+                    <bvar>
+                        <ci>time</ci>
+                    </bvar>
+                    <ci>Ras_ShcGS</ci>
+                </apply>
+                <apply>
+                    <minus/>
+                    <ci>v12</ci>
+                    <ci>v13</ci>
+                </apply>
+            </apply>
+        </math>
+    </component>
+    <component name="RasGTP">
+        <variable initial_value="200" name="RasGTP" public_interface="out" units="dimensionless"/>
+        <variable name="RasGDP" public_interface="in" units="dimensionless"/>
+        <variable name="v13" public_interface="in" units="first_order_rate_constant"/>
+        <variable name="v14" public_interface="in" units="first_order_rate_constant"/>
+        <variable name="v16" public_interface="in" units="first_order_rate_constant"/>
+        <variable name="time" public_interface="in" units="minute"/>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <apply>
+                    <diff/>
+                    <bvar>
+                        <ci>time</ci>
+                    </bvar>
+                    <ci>RasGTP</ci>
+                </apply>
+                <apply>
+                    <minus/>
+                    <apply>
+                        <minus/>
+                        <ci>v13</ci>
+                        <ci>v14</ci>
+                    </apply>
+                    <ci>v16</ci>
+                </apply>
+            </apply>
+        </math>
+    </component>
+    <component name="GAP">
+        <variable initial_value="15000" name="GAP" public_interface="out" units="dimensionless"/>
+        <variable name="v15" public_interface="in" units="first_order_rate_constant"/>
+        <variable name="v14" public_interface="in" units="first_order_rate_constant"/>
+        <variable name="time" public_interface="in" units="minute"/>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <apply>
+                    <diff/>
+                    <bvar>
+                        <ci>time</ci>
+                    </bvar>
+                    <ci>GAP</ci>
+                </apply>
+                <apply>
+                    <minus/>
+                    <ci>v15</ci>
+                    <ci>v14</ci>
+                </apply>
+            </apply>
+        </math>
+    </component>
+    <component name="Ras_GAP">
+        <variable initial_value="0" name="Ras_GAP" public_interface="out" units="dimensionless"/>
+        <variable name="v14" public_interface="in" units="first_order_rate_constant"/>
+        <variable name="v15" public_interface="in" units="first_order_rate_constant"/>
+        <variable name="time" public_interface="in" units="minute"/>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <apply>
+                    <diff/>
+                    <bvar>
+                        <ci>time</ci>
+                    </bvar>
+                    <ci>Ras_GAP</ci>
+                </apply>
+                <apply>
+                    <minus/>
+                    <ci>v14</ci>
+                    <ci>v15</ci>
+                </apply>
+            </apply>
+        </math>
+    </component>
+    <component name="Ras_Raf">
+        <variable initial_value="0" name="Ras_Raf" public_interface="out" units="dimensionless"/>
+        <variable name="v16" public_interface="in" units="first_order_rate_constant"/>
+        <variable name="time" public_interface="in" units="minute"/>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <apply>
+                    <diff/>
+                    <bvar>
+                        <ci>time</ci>
+                    </bvar>
+                    <ci>Ras_Raf</ci>
+                </apply>
+                <ci>v16</ci>
+            </apply>
+        </math>
+    </component>
+    <component name="v12">
+        <variable name="v12" public_interface="out" units="first_order_rate_constant"/>
+        <variable name="RasGDP" public_interface="in" units="dimensionless"/>
+        <variable name="ShcGS" public_interface="in" units="dimensionless"/>
+        <variable name="Ras_ShcGS" public_interface="in" units="dimensionless"/>
+        <variable initial_value="0.0163" name="k12" units="first_order_rate_constant"/>
+        <variable initial_value="10" name="kn12" units="first_order_rate_constant"/>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <ci>v12</ci>
+                <apply>
+                    <minus/>
+                    <apply>
+                        <times/>
+                        <ci>k12</ci>
+                        <ci>RasGDP</ci>
+                        <ci>ShcGS</ci>
+                    </apply>
+                    <apply>
+                        <times/>
+                        <ci>kn12</ci>
+                        <ci>Ras_ShcGS</ci>
+                    </apply>
+                </apply>
+            </apply>
+        </math>
+    </component>
+    <component name="v13">
+        <variable name="v13" public_interface="out" units="first_order_rate_constant"/>
+        <variable name="Ras_ShcGS" public_interface="in" units="dimensionless"/>
+        <variable initial_value="15" name="k_13" units="first_order_rate_constant"/>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <ci>v13</ci>
+                <apply>
+                    <times/>
+                    <ci>k_13</ci>
+                    <ci>Ras_ShcGS</ci>
+                </apply>
+            </apply>
+        </math>
+    </component>
+    <component name="v14">
+        <variable name="v14" public_interface="out" units="first_order_rate_constant"/>
+        <variable name="RasGTP" public_interface="in" units="dimensionless"/>
+        <variable name="GAP" public_interface="in" units="dimensionless"/>
+        <variable name="Ras_GAP" public_interface="in" units="dimensionless"/>
+        <variable initial_value="0.005" name="k14" units="first_order_rate_constant"/>
+        <variable initial_value="60" name="kn14" units="first_order_rate_constant"/>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <ci>v14</ci>
+                <apply>
+                    <minus/>
+                    <apply>
+                        <times/>
+                        <ci>k14</ci>
+                        <ci>RasGTP</ci>
+                        <ci>GAP</ci>
+                    </apply>
+                    <apply>
+                        <times/>
+                        <ci>kn14</ci>
+                        <ci>Ras_GAP</ci>
+                    </apply>
+                </apply>
+            </apply>
+        </math>
+    </component>
+    <component name="v15">
+        <variable name="v15" public_interface="out" units="first_order_rate_constant"/>
+        <variable name="Ras_GAP" public_interface="in" units="dimensionless"/>
+        <variable initial_value="720" name="k15" units="first_order_rate_constant"/>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <ci>v15</ci>
+                <apply>
+                    <times/>
+                    <ci>k15</ci>
+                    <ci>Ras_GAP</ci>
+                </apply>
+            </apply>
+        </math>
+    </component>
+    <component name="v16">
+        <variable name="v16" public_interface="out" units="first_order_rate_constant"/>
+        <variable name="RasGTP" public_interface="in" units="dimensionless"/>
+        <variable name="Ras_Raf" public_interface="in" units="dimensionless"/>
+        <variable initial_value="0.0012" name="k16" units="first_order_rate_constant"/>
+        <variable initial_value="3" name="kn16" units="first_order_rate_constant"/>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <ci>v16</ci>
+                <apply>
+                    <minus/>
+                    <apply>
+                        <times/>
+                        <ci>k16</ci>
+                        <ci>RasGTP</ci>
+                    </apply>
+                    <apply>
+                        <times/>
+                        <ci>kn16</ci>
+                        <ci>Ras_Raf</ci>
+                    </apply>
+                </apply>
+            </apply>
+        </math>
+    </component>
+    <connection>
+        <map_components component_1="ShcGS" component_2="environment"/>
+        <map_variables variable_1="time" variable_2="time"/>
+    </connection>
+    <connection>
+        <map_components component_1="RasGDP" component_2="environment"/>
+        <map_variables variable_1="time" variable_2="time"/>
+    </connection>
+    <connection>
+        <map_components component_1="Ras_ShcGS" component_2="environment"/>
+        <map_variables variable_1="time" variable_2="time"/>
+    </connection>
+    <connection>
+        <map_components component_1="RasGTP" component_2="environment"/>
+        <map_variables variable_1="time" variable_2="time"/>
+    </connection>
+    <connection>
+        <map_components component_1="GAP" component_2="environment"/>
+        <map_variables variable_1="time" variable_2="time"/>
+    </connection>
+    <connection>
+        <map_components component_1="Ras_GAP" component_2="environment"/>
+        <map_variables variable_1="time" variable_2="time"/>
+    </connection>
+    <connection>
+        <map_components component_1="Ras_Raf" component_2="environment"/>
+        <map_variables variable_1="time" variable_2="time"/>
+    </connection>
+    <connection>
+        <map_components component_1="ShcGS" component_2="v13"/>
+        <map_variables variable_1="v13" variable_2="v13"/>
+    </connection>
+    <connection>
+        <map_components component_1="ShcGS" component_2="v12"/>
+        <map_variables variable_1="ShcGS" variable_2="ShcGS"/>
+        <map_variables variable_1="v12" variable_2="v12"/>
+    </connection>
+    <connection>
+        <map_components component_1="RasGDP" component_2="v15"/>
+        <map_variables variable_1="v15" variable_2="v15"/>
+    </connection>
+    <connection>
+        <map_components component_1="RasGDP" component_2="v12"/>
+        <map_variables variable_1="RasGDP" variable_2="RasGDP"/>
+        <map_variables variable_1="v12" variable_2="v12"/>
+    </connection>
+    <connection>
+        <map_components component_1="Ras_ShcGS" component_2="v12"/>
+        <map_variables variable_1="Ras_ShcGS" variable_2="Ras_ShcGS"/>
+        <map_variables variable_1="v12" variable_2="v12"/>
+    </connection>
+    <connection>
+        <map_components component_1="Ras_ShcGS" component_2="v13"/>
+        <map_variables variable_1="Ras_ShcGS" variable_2="Ras_ShcGS"/>
+        <map_variables variable_1="v13" variable_2="v13"/>
+    </connection>
+    <connection>
+        <map_components component_1="RasGTP" component_2="RasGDP"/>
+        <map_variables variable_1="RasGDP" variable_2="RasGDP"/>
+    </connection>
+    <connection>
+        <map_components component_1="RasGTP" component_2="v13"/>
+        <map_variables variable_1="v13" variable_2="v13"/>
+    </connection>
+    <connection>
+        <map_components component_1="RasGTP" component_2="v14"/>
+        <map_variables variable_1="RasGTP" variable_2="RasGTP"/>
+        <map_variables variable_1="v14" variable_2="v14"/>
+    </connection>
+    <connection>
+        <map_components component_1="RasGTP" component_2="v16"/>
+        <map_variables variable_1="RasGTP" variable_2="RasGTP"/>
+        <map_variables variable_1="v16" variable_2="v16"/>
+    </connection>
+    <connection>
+        <map_components component_1="GAP" component_2="v15"/>
+        <map_variables variable_1="v15" variable_2="v15"/>
+    </connection>
+    <connection>
+        <map_components component_1="GAP" component_2="v14"/>
+        <map_variables variable_1="GAP" variable_2="GAP"/>
+        <map_variables variable_1="v14" variable_2="v14"/>
+    </connection>
+    <connection>
+        <map_components component_1="Ras_GAP" component_2="v14"/>
+        <map_variables variable_1="Ras_GAP" variable_2="Ras_GAP"/>
+        <map_variables variable_1="v14" variable_2="v14"/>
+    </connection>
+    <connection>
+        <map_components component_1="Ras_GAP" component_2="v15"/>
+        <map_variables variable_1="Ras_GAP" variable_2="Ras_GAP"/>
+        <map_variables variable_1="v15" variable_2="v15"/>
+    </connection>
+    <connection>
+        <map_components component_1="Ras_Raf" component_2="v16"/>
+        <map_variables variable_1="Ras_Raf" variable_2="Ras_Raf"/>
+        <map_variables variable_1="v16" variable_2="v16"/>
+    </connection>
+    <documentation xmlns="http://cellml.org/tmp-documentation">
+        <article xmlns="http://cellml.org/tmp-documentation">
+            <articleinfo xmlns="http://cellml.org/tmp-documentation">
+                <title xmlns="http://cellml.org/tmp-documentation">Differential Feedback Regulation of the MAPK Cascade Underlies the&#xd;
+Quantitative Differences in EGF and NGF Signalling in PC12 Cells</title>
+                <author xmlns="http://cellml.org/tmp-documentation">
+                    <firstname xmlns="http://cellml.org/tmp-documentation">Jeelean</firstname>
+                    <surname xmlns="http://cellml.org/tmp-documentation">Lim</surname>
+                    <affiliation xmlns="http://cellml.org/tmp-documentation">
+                        <shortaffil xmlns="http://cellml.org/tmp-documentation">Bioengineering Institute, University of Auckland</shortaffil>
+                    </affiliation>
+                </author>
+            </articleinfo>
+            <section xmlns="http://cellml.org/tmp-documentation" id="sec_status">
+                <title xmlns="http://cellml.org/tmp-documentation">Model Status</title>
+                <para xmlns="http://cellml.org/tmp-documentation">&#xd;
+            This is the initial translation of the model into CellML. Concentrations have no dimensions in order to balance units. The percentage activation variables used to produce the graphs in the paper have not yet been added to this model. The model can therefore run in Opencell and COR but does not reproduce the figures in the paper.&#xd;
+          </para>
+            </section>
+            <sect1 xmlns="http://cellml.org/tmp-documentation" id="sec_structure">
+                <title xmlns="http://cellml.org/tmp-documentation">Model Structure</title>
+                <para xmlns="http://cellml.org/tmp-documentation">&#xd;
+ABSTRACT: Although epidermal growth factor (EGF) induces transient activation of Ras and the mitogen-activated protein kinase (MAPK) cascade in PC12 cells, whereas nerve growth factor (NGF) stimulates sustained activation, the basis for these contrasting responses is not known. We have developed a computer simulation of EGF-induced MAPK cascade activation, which provides quantitative evidence that feedback inhibition of the MAPK cascade is the most important factor in determining the duration of cascade activation. Hence, we propose that the observed quantitative differences in EGF and NGF signalling can be accounted for by differential feedback regulation of the MAPK cascade.&#xd;
+</para>
+                <para xmlns="http://cellml.org/tmp-documentation">&#xd;
+The complete original paper reference is cited below:&#xd;
+</para>
+                <para xmlns="http://cellml.org/tmp-documentation">&#xd;
+					Differential feedback regulation of the MAPK cascade underlies the quantitative differences in EGF and NGF signalling in PC12 cells, Frances A. Brightman, David A. Fell, 2000,<emphasis xmlns="http://cellml.org/tmp-documentation">Federation of European Biochemical Societies Letters</emphasis>, 482(3), 169-174.  <ulink xmlns="http://cellml.org/tmp-documentation" url="http://www.ncbi.nlm.nih.gov/pubmed/11024454">PubMed ID: 11024454</ulink>
+                </para>
+                <informalfigure xmlns="http://cellml.org/tmp-documentation" float="0" id="fig_reaction_diagram">
+                    <mediaobject xmlns="http://cellml.org/tmp-documentation">
+                        <imageobject xmlns="http://cellml.org/tmp-documentation">
+                            <objectinfo xmlns="http://cellml.org/tmp-documentation">
+                                <title xmlns="http://cellml.org/tmp-documentation">reaction diagram</title>
+                            </objectinfo>
+                            <imagedata xmlns="http://cellml.org/tmp-documentation" fileref="brightman_2000.png"/>
+                        </imageobject>
+                    </mediaobject>
+                    <caption xmlns="http://cellml.org/tmp-documentation">Schematic representation of the computer simulation of EGF signal transduction.</caption>
+                </informalfigure>
+            </sect1>
+        </article>
+    </documentation>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+        <foo xmlns="http://www.example.org/foo/bar/baz"/>
+        <!--
+      The following RDF block contains metadata that applies to this document
+      as a whole, as indicated by the empty about attribute on the 
+      <rdf:Description> element.
+    -->
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="">
+            <!--
+        The Model Builder Metadata.  The Dublin Core "creator" element is used  
+        to indicate the person who translated the model into CellML.
+      -->
+            <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:parseType="Resource" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                <vCard:N xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" rdf:parseType="Resource" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <vCard:Family xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">Lim</vCard:Family>
+                    <vCard:Given xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">Jeelean</vCard:Given>
+                </vCard:N>
+                <vCard:EMAIL xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" rdf:parseType="Resource" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:value xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">jlim063@aucklanduni.ac.nz</rdf:value>
+                    <rdf:type xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:resource="http://imc.org/vCard/3.0#internet"/>
+                </vCard:EMAIL>
+                <vCard:ORG xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" rdf:parseType="Resource" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <vCard:Orgname xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">The University of Auckland</vCard:Orgname>
+                    <vCard:Orgunit xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">The Auckland Bioengineering Institute</vCard:Orgunit>
+                </vCard:ORG>
+            </dc:creator>
+            <!--
+        The Creation Date metadata. This is the date on which the model
+        was translated into CellML.
+      -->
+            <dcterms:created xmlns:dcterms="http://purl.org/dc/terms/" rdf:parseType="Resource" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                <dcterms:W3CDTF xmlns:dcterms="http://purl.org/dc/terms/">2001-09-10</dcterms:W3CDTF>
+            </dcterms:created>
+        </rdf:Description>
+        <!--
+      The following metadata refers to the model itself, as indicated by the
+      reference to the ID "brightman_fell_2000", which is    
+      declared on the <model> element.
+    -->
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#brightman_fell_2000">
+            <!-- A human readable name for the model. -->
+            <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">&#xd;
+        The Brightman, Fell Model of Differential Feedback Regulation of the MAPK Cascade Underlying the Quantitative Differences in EGF and NGF Signalling in PC12 Cells&#xd;
+      </dc:title>
+            <!-- A comment regarding the model. -->
+            <cmeta:comment xmlns:cmeta="http://www.cellml.org/metadata/1.0#" rdf:parseType="Resource" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                <rdf:value xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">&#xd;
+          This is the CellML description of Brightman and Fell's model of differential feedback regulation of the MAPK cascade underlying the quantitative differences in EGF and NGF signalling in PC12 cells  &#xd;
+        </rdf:value>
+                <!-- The creator of the comment. -->
+                <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:parseType="Resource" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <vCard:FN xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">Jeelean Lim</vCard:FN>
+                </dc:creator>
+            </cmeta:comment>
+            <!--  Keyword(s) -->
+            <bqs:reference xmlns:bqs="http://www.cellml.org/bqs/1.0#" rdf:parseType="Resource" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                <dc:subject xmlns:dc="http://purl.org/dc/elements/1.1/" rdf:parseType="Resource" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <bqs:subject_type xmlns:bqs="http://www.cellml.org/bqs/1.0#">keyword</bqs:subject_type>
+                    <rdf:value xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                        <rdf:Bag xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                            <rdf:li xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">Epidermal Growth Factor</rdf:li>
+                            <rdf:li xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">Mitogen-activated protein kinase</rdf:li>
+                            <rdf:li xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">Signal Transduction</rdf:li>
+                        </rdf:Bag>
+                    </rdf:value>
+                </dc:subject>
+            </bqs:reference>
+            <!-- 
+        The CellML Metadata Specification recommends that bibliographic metadata
+        is used to provide information about the original model reference.  The 
+        "identifier" attribute on the "BibliographicReference" class provides an
+        elegant way to identify a cited reference using a database identifier            such as Pubmed.  All associated data such as author, journal title,     
+        date, etc can be looked up on the database.
+      -->
+            <bqs:reference xmlns:bqs="http://www.cellml.org/bqs/1.0#" rdf:parseType="Resource" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                <bqs:Pubmed_id xmlns:bqs="http://www.cellml.org/bqs/1.0#">11024454</bqs:Pubmed_id>
+                <bqs:JournalArticle xmlns:bqs="http://www.cellml.org/bqs/1.0#" rdf:parseType="Resource" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">
+                        <rdf:Seq xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                            <rdf:li xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:parseType="Resource">
+                                <bqs:Person xmlns:bqs="http://www.cellml.org/bqs/1.0#" rdf:parseType="Resource" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                                    <vCard:N xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" rdf:parseType="Resource" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                                        <vCard:Family xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">Brightman</vCard:Family>
+                                        <vCard:Given xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">F</vCard:Given>
+                                        <vCard:Other xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">A</vCard:Other>
+                                    </vCard:N>
+                                </bqs:Person>
+                            </rdf:li>
+                            <rdf:li xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:parseType="Resource">
+                                <bqs:Person xmlns:bqs="http://www.cellml.org/bqs/1.0#" rdf:parseType="Resource" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                                    <vCard:N xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" rdf:parseType="Resource" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                                        <vCard:Family xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">Fell</vCard:Family>
+                                        <vCard:Given xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">D</vCard:Given>
+                                        <vCard:Other xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">A</vCard:Other>
+                                    </vCard:N>
+                                </bqs:Person>
+                            </rdf:li>
+                        </rdf:Seq>
+                    </dc:creator>
+                    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">&#xd;
+            Differential feedback regulation of the MAPK cascade underlies the quantitative differences in EGF and NGF signalling in PC12 cells.&#xd;
+          </dc:title>
+                    <dcterms:issued xmlns:dcterms="http://purl.org/dc/terms/" rdf:parseType="Resource" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                        <dcterms:W3CDTF xmlns:dcterms="http://purl.org/dc/terms/">2000-10</dcterms:W3CDTF>
+                    </dcterms:issued>
+                    <bqs:Journal xmlns:bqs="http://www.cellml.org/bqs/1.0#" rdf:parseType="Resource" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                        <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Federation of European Biochemical Societies Letters</dc:title>
+                    </bqs:Journal>
+                    <bqs:volume xmlns:bqs="http://www.cellml.org/bqs/1.0#">482</bqs:volume>
+                    <bqs:first_page xmlns:bqs="http://www.cellml.org/bqs/1.0#">169</bqs:first_page>
+                    <bqs:last_page xmlns:bqs="http://www.cellml.org/bqs/1.0#">174</bqs:last_page>
+                </bqs:JournalArticle>
+            </bqs:reference>
+        </rdf:Description>
+    </rdf:RDF>
+</model>
