@@ -22,3 +22,7 @@ The modified annotated CellML models (or parameter sets) are stored in :point_ri
 The connectivity matrices for the modules are stored in :point_right: [Connectivity Matrices](https://github.com/Niloofar-Sh/EGFR_MAPK/tree/main/Connectivity%20Matrices)  
 
 To observe the comparisons between our results and the original models and analyze the behaviour of the final composed model, go to :point_right: [Comparison](https://github.com/Niloofar-Sh/EGFR_MAPK/tree/main/Results_comparison) 
+
+# How to run the models?
+
+You need to install Python and pip install BondGraphTools from: [BondGraphTools GitHub repo](https://github.com/BondGraphTools/BondGraphTools)
