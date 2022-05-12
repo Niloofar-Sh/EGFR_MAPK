@@ -6,7 +6,7 @@ The bond graph model of the EGFR pathway along with the parameter estimation is 
 
 The bond graph model of the MAPK cascade along with its dependencies is available in :point_right: [MAPK cascade](https://github.com/Niloofar-Sh/EGFR_MAPK/tree/main/MAPK%20cascade)
 
-A third module was also modified out of the Brighman & Fell's model to account for some missing intermediate steps between the two major modules. We called it the Ras activation module.
+A third module was also modified out of the Brighman & Fell's model to account for some missing intermediate steps between the two major modules. We called it the Ras module and is available in :point_right: [Ras](https://github.com/Niloofar-Sh/EGFR_MAPK/tree/main/Ras)
 
 To run the models you need to first install BondGraphTools, and then download and save the required ontologies as .csv files:
 
